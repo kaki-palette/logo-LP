@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業ロゴ制作｜納得して選べるロゴ設計支援</title>
+    <meta name="description" content="アイデアは瞬時に、判断は確実に。シンプルで洗練された企業ロゴをデザインします。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-text">企業ロゴ制作</a>
+        <ul class="nav-links">
+            <li><a href="#gallery">制作実績</a></li>
+            <li><a href="flow.html">ご購入の流れ</a></li>
+            <li><a href="#contact" class="btn-primary-sm">お問い合わせ</a></li>
+        </ul>
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-inner fade-in">
+            <h1>アイデアは瞬時に、<br><span class="gradient-text">判断は確実に。</span></h1>
+            <p class="hero-sub">納得して選べるロゴ設計支援。<br>あなたの想いを形にし、ビジネスを加速させるアイデンティティを創り出します。</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn-secondary">制作実績を見る</a>
+                <a href="flow.html" class="btn-primary">ご購入の流れ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Logo Gallery Section -->
+    <section class="gallery section-padding" id="gallery">
+        <div class="section-title fade-in">
+            <h2>制作実績</h2>
+            <p>これまでに手がけたロゴデザインの一部をご紹介します</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <!--
+                ここにお客様のロゴ画像を追加してください。
+                以下のフォーマットで画像を追加できます：
+                <div class="gallery-item fade-in">
+                    <img src="images/ロゴ画像ファイル名.png" alt="ロゴの説明">
+                </div>
+
+                現在はダミー画像が入っています。
+                実際の画像に差し替えたい場合は、
+                1. d:\Antiテスト\images フォルダに画像を保存
+                2. 下記の src="" の部分を画像ファイル名に変更
+            -->
+            <div class="gallery-item fade-in">
+                <div class="placeholder-logo grad-bg-1"><span>A</span></div>
+            </div>
+            <div class="gallery-item fade-in">
+                <div class="placeholder-logo grad-bg-2"><span>B</span></div>
+            </div>
+            <div class="gallery-item fade-in">
+                <div class="placeholder-logo grad-bg-3"><span>C</span></div>
+            </div>
+            <div class="gallery-item fade-in">
+                <div class="placeholder-logo grad-bg-4"><span>D</span></div>
+            </div>
+            <div class="gallery-item fade-in">
+                <div class="placeholder-logo grad-bg-5"><span>E</span></div>
+            </div>
+            <div class="gallery-item fade-in">
+                <div class="placeholder-logo grad-bg-6"><span>F</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="contact-container glass-card fade-in">
+            <div class="contact-info">
+                <h2>お問い合わせ</h2>
+                <p>あなたのビジネスを次のレベルへ。<br>まずはお気軽にお問い合わせください。</p>
+                <a href="flow.html" class="btn-secondary" style="margin-top:1rem;">ご購入の流れを見る →</a>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">お名前 / 会社名</label>
+                    <input type="text" id="name" placeholder="例：株式会社サンプル" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" placeholder="info@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">ご要望・ご相談内容</label>
+                    <textarea id="message" rows="4" placeholder="ロゴを新しく作りたいと考えています..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-100">送信する</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo-text">企業ロゴ制作</div>
+            <div class="footer-links">
+                <a href="index.html">トップページ</a>
+                <a href="#gallery">制作実績</a>
+                <a href="flow.html">ご購入の流れ</a>
+                <a href="#contact">お問い合わせ</a>
+            </div>
+            <p>&copy; 2026 企業ロゴ制作｜納得して選べるロゴ設計支援</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
