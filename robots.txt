@@ -1,0 +1,8 @@
+# robots.txt for KAKI MARK
+# すべてのクローラーに全ページのクロールを許可します
+
+User-agent: *
+Allow: /
+
+# サイトマップの場所（リポジトリ名確定後にURLを更新してください）
+Sitemap: https://kaki-palette.github.io/logo-LP/sitemap.xml
