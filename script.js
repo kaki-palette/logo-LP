@@ -1,17 +1,19 @@
-// Navbar scroll effect
+// ===== Navbar scroll effect =====
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Mobile hamburger menu
+// ===== Mobile hamburger =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
+
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
+
     // Close menu when a link is clicked
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
@@ -21,12 +23,10 @@ if (hamburger) {
     });
 }
 
-// Intersection Observer for scroll animations
+// ===== Scroll fade-in (Intersection Observer) =====
 const faders = document.querySelectorAll('.fade-in');
-const appearOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -40px 0px"
-};
+const appearOptions = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
+
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -35,32 +35,32 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
         }
     });
 }, appearOptions);
+
 faders.forEach(fader => appearOnScroll.observe(fader));
 
-// Trigger animations for elements already in viewport on load
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        faders.forEach(fader => {
-            if (fader.getBoundingClientRect().top < window.innerHeight) {
-                fader.classList.add('appear');
+// ===== FAQ Accordion =====
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (question) {
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            // Close all other items
+            faqItems.forEach(other => other.classList.remove('active'));
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
             }
         });
-    }, 100);
+    }
 });
 
-// Form submission handler (demo)
-const form = document.getElementById('contactForm');
-if (form) {
-    form.addEventListener('submit', (e) => {
+// ===== Contact Form =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        const btn = form.querySelector('button');
-        const originalText = btn.textContent;
-        btn.textContent = '送信完了しました！';
-        btn.style.background = 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)';
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.style.background = '';
-            form.reset();
-        }, 3000);
+        alert('お問い合わせありがとうございます！\n内容を確認後、24時間以内にご連絡いたします。');
+        contactForm.reset();
     });
 }
