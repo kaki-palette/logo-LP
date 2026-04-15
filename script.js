@@ -55,12 +55,7 @@ faqItems.forEach(item => {
     }
 });
 
-// ===== Contact Form =====
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('お問い合わせありがとうございます！\n内容を確認後、24時間以内にご連絡いたします。');
-        contactForm.reset();
-    });
-}
+// ===== Contact Form (FormSubmit使用) =====
+// フォーム送信はFormSubmit（https://formsubmit.co）が処理します。
+// 初回送信時にFormSubmitからメールアドレス確認メールが届きます。
+// 確認リンクをクリック後、以降の送信が正常に届くようになります。

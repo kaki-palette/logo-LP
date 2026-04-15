@@ -3,13 +3,13 @@
     --bg-color: #fafafa;
     --text-main: #2d3436;
     --text-muted: #636e72;
-    --primary: #f5576c;
-    --primary-light: #ff9a9e;
-    --primary-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-    --secondary-gradient: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    --primary: #d4622a;
+    --primary-light: #f0a070;
+    --primary-gradient: linear-gradient(135deg, #f0a070 0%, #ffe4cc 100%);
+    --secondary-gradient: linear-gradient(120deg, #f0a070 0%, #d4622a 100%);
     --tertiary-gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    --accent-yellow: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-    --accent-blue: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    --accent-yellow: linear-gradient(135deg, #f6d365 0%, #f0a070 100%);
+    --accent-blue: linear-gradient(135deg, #d4a574 0%, #ffe4cc 100%);
     --glass-bg: rgba(255, 255, 255, 0.85);
     --glass-border: rgba(255, 255, 255, 0.6);
     --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
@@ -109,7 +109,7 @@ p {
 
 .glass-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 40px rgba(245, 87, 108, 0.12);
+    box-shadow: 0 14px 40px rgba(212, 98, 42, 0.12);
 }
 
 /* ===== Buttons ===== */
@@ -129,7 +129,7 @@ p {
 .btn-primary {
     padding: 1rem 2.5rem;
     font-size: 1.05rem;
-    box-shadow: 0 8px 20px rgba(245, 87, 108, 0.25);
+    box-shadow: 0 8px 20px rgba(212, 98, 42, 0.25);
 }
 
 .btn-primary-sm {
@@ -139,7 +139,7 @@ p {
 
 .btn-primary:hover, .btn-primary-sm:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 28px rgba(245, 87, 108, 0.35);
+    box-shadow: 0 12px 28px rgba(212, 98, 42, 0.35);
 }
 
 .btn-secondary {
@@ -159,7 +159,7 @@ p {
 .btn-secondary:hover {
     border-color: var(--primary-light);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 154, 158, 0.18);
+    box-shadow: 0 8px 20px rgba(240, 160, 112, 0.18);
 }
 
 .btn-outline {
