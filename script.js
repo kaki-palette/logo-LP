@@ -81,11 +81,11 @@ if (contactForm) {
                 contactForm.innerHTML = `
                     <div class="success-message" style="text-align: center; padding: 3rem 1.5rem; background: var(--glass-bg); border-radius: var(--radius); border: 1px solid var(--glass-border);">
                         <h3 style="margin-bottom: 1.5rem; color: var(--text-main);">送信完了しました</h3>
-                        <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.05rem;">
+                        <p style="color: var(--text-muted); line-height: 1.8; font-size: 1rem;">
                             お問い合わせありがとうございます。<br>
                             メッセージは正常に送信されました。<br>
-                            内容を確認の上、折り返しご連絡いたしますので、<br>
-                            今しばらくお待ちくださいませ。
+                            <span style="display: inline-block;">内容を確認の上、折り返しご連絡いたしますので、</span><br>
+                            <span style="display: inline-block;">今しばらくお待ちくださいませ。</span>
                         </p>
                     </div>
                 `;
