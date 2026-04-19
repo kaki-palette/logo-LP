@@ -55,7 +55,51 @@ faqItems.forEach(item => {
     }
 });
 
-// ===== Contact Form (FormSubmit使用) =====
-// フォーム送信はFormSubmit（https://formsubmit.co）が処理します。
-// 初回送信時にFormSubmitからメールアドレス確認メールが届きます。
-// 確認リンクをクリック後、以降の送信が正常に届くようになります。
+// ===== Contact Form (AJAX FormSubmit) =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // 画面遷移を防ぐ
+        
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        btn.textContent = '送信中...';
+        btn.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // 送信成功時にフォームをメッセージに置き換える
+                contactForm.innerHTML = `
+                    <div class="success-message" style="text-align: center; padding: 3rem 1.5rem; background: var(--glass-bg); border-radius: var(--radius); border: 1px solid var(--glass-border);">
+                        <div style="font-size: 3.5rem; margin-bottom: 1rem;">✅</div>
+                        <h3 style="margin-bottom: 1rem; color: var(--text-main);">送信完了しました</h3>
+                        <p style="color: var(--text-muted); line-height: 1.8;">
+                            お問い合わせありがとうございます。<br>
+                            メッセージは正常に送信されました。<br><br>
+                            内容を確認の上、折り返しご連絡いたしますので、<br>
+                            今しばらくお待ちくださいませ。
+                        </p>
+                    </div>
+                `;
+            } else {
+                alert('エラーが発生しました。時間をおいて再度お試しください。');
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        })
+        .catch(error => {
+            alert('通信エラーが発生しました。ネットワーク環境をご確認ください。');
+            btn.textContent = originalText;
+            btn.disabled = false;
+        });
+    });
+}
