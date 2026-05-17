@@ -55,7 +55,7 @@ faqItems.forEach(item => {
     }
 });
 
-// ===== Contact Form (AJAX FormSubmit) =====
+// ===== Contact Form (AJAX Web3Forms) =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {

@@ -595,12 +595,11 @@
                     </div>
                 </div>
             </div>
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/impossible.is.nothing.1012@gmail.com" method="POST">
-                <!-- FormSubmit設定 -->
-                <input type="hidden" name="_subject" value="【KAKI MARK】ウェブサイトからのお問い合わせ">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://kaki-palette.github.io/logo-LP/">
-                <input type="hidden" name="_template" value="table">
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms設定 -->
+                <input type="hidden" name="access_key" value="ecb8504c-b489-456c-adf5-6bad89b45e18">
+                <input type="hidden" name="subject" value="【KAKI MARK】ウェブサイトからのお問い合わせ">
+                <input type="hidden" name="from_name" value="KAKI MARK お問い合わせ">
                 <div class="form-group">
                     <label for="name">お名前 / 会社名</label>
                     <input type="text" id="name" name="name" placeholder="例：株式会社サンプル" required>
